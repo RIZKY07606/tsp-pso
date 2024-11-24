@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PSO TSP Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="text-center">Particle Swarm Optimization - TSP</h1>
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Iteration</th>
+            <th>Gbest Fitness</th>
+            <th>Optimal Route</th>
+          </tr>
+        </thead>
+        <tbody id="resultTable"></tbody>
+      </table>
+      <canvas id="fitnessChart"></canvas>
+    </div>
+    <button id="startButton" class="btn">Start Optimization</button>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
