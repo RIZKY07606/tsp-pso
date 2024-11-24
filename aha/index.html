@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimasi TSP Jawa Timur</title>
+
+    <!-- Link untuk Leaflet dan Chart.js CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Link untuk Google Fonts dan Styling -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Optimasi TSP Jawa Timur</h1>
+        <p>
+          Gunakan Multi-Objective Artificial Hummingbird Algorithm untuk
+          optimasi rute 10 kota di Jawa Timur.
+        </p>
+      </header>
+
+      <main>
+        <section class="map-section">
+          <div id="map"></div>
+        </section>
+
+        <section class="chart-section">
+          <div class="chart-container">
+            <canvas id="distanceChart"></canvas>
+            <canvas id="timeChart"></canvas>
+          </div>
+        </section>
+
+        <div id="bestResult"></div>
+        <!-- Menampilkan hasil terbaik di sini -->
+        <canvas id="distanceChart"></canvas>
+        <canvas id="timeChart"></canvas>
+        <div id="map" style="height: 500px"></div>
+
+        <section class="controls">
+          <button id="runAlgorithm" class="btn">Jalankan Optimasi</button>
+        </section>
+      </main>
+    </div>
+
+    <!-- Mengimpor file data.js dan script.js sebagai modul -->
+    <script type="module" src="data.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

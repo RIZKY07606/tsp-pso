@@ -1,0 +1,144 @@
+/* Reset default margin dan padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font dasar */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Kontainer utama */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styling untuk header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Styling untuk map */
+.map-section {
+  margin-bottom: 40px;
+  width: 100%;
+  height: 400px; /* Ukuran peta */
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Styling untuk chart */
+.chart-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+canvas {
+  width: 100% !important; /* Pastikan grafik mengisi lebar kontainer */
+  height: 400px !important;
+}
+
+/* Styling untuk tombol dan kontrol */
+.controls {
+  text-align: center;
+}
+
+#runAlgorithm {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#runAlgorithm:hover {
+  background-color: #45a049;
+}
+
+/* Styling untuk footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .chart-container {
+    width: 90%;
+  }
+
+  canvas {
+    height: 300px !important;
+  }
+
+  .map-section {
+    height: 300px; /* Peta lebih kecil di layar kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  #runAlgorithm {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .chart-container {
+    width: 100%;
+  }
+}
